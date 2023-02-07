@@ -1,0 +1,55 @@
+
+mat=matrix(c(1:9), nrow=3,ncol=3, byrow=TRUE)
+print(mat)
+new=t(mat)  
+print(new)
+
+
+
+
+
+city=c("A","B","C")
+zip=c(12,15,18)
+state= c("AA","BB","CC")
+
+y= cbind(city,state,zip) 
+print(y)   
+
+
+
+
+
+
+
+n=data.frame(
+city="D",zip=4,state="DD"  
+)
+print(rbind(y,n))
+
+
+
+
+a=data.frame(
+city="KOCHI", zip=123
+)
+b=data.frame(
+city="IDUKI", zip=621
+)
+
+new= merge(b,a,all=TRUE)
+print(new)
+
+
+
+
+
+
+library(MASS)
+library(reshape)
+
+a=data.frame(a=c(1,2,3),b=c(11,22,33),c=c(111,222,333),d=c(1111,2222,3333)
+ print(a) 
+ m=melt(a,id=c("a","b"))
+ print(m)
+ c=cast(m,a~variable,mean)
+ print(c)

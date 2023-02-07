@@ -1,0 +1,15 @@
+
+
+x=c(151,174,138,186,128)   
+y=c(63,81,56,91,47)
+
+print(summary(lm(y~x)))
+
+plot( y,x,col="blue",main="HEIGHT AND WEIGHT", abline(lm(x~y), xlab="kg", ylab="cm") )
+
+
+
+
+
+a=glm(formula=am~hp+wt+cyl,data=mtcars,family=binomial)
+print(summary(a))

@@ -1,0 +1,9 @@
+
+library(ggplot2)
+ggplot(mtcars)+
+
+geom_point(mapping=aes(x=wt,y=mpg, color=disp))
+ggplot(mtcars)+geom_histogram(mapping=aes(x=mpg ))
+boxplot(mpg ~ cyl, data=mtcars ,xlab="cylinder", ylab="miles" )
+
+dotchart(mtcars$mpg, labels=row.names(mtcars), main="Milage", xlab="MPG") 
